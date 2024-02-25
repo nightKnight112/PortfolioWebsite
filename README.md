@@ -1,3 +1,3 @@
 ### Description
 
-A simple portfolio template for developer/designers built with React. 
+A simple portfolio template built with React. 
