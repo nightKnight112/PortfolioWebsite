@@ -17,22 +17,22 @@ const introdata = {
 
 const dataabout = {
     title: "Introduction",
-    aboutme: "",
+    aboutme: "Developer@TCS || ex-Programmer Analyst Intern@Cognizant || Full Stack Java Developer (Angular/React fronted & Spring Boot backend)|| ML, NLP and Computer Vision enthusiast",
 };
 const worktimeline = [{
-        jobtitle: "Designer of week",
-        where: "YAdfi",
-        date: "2020",
+        jobtitle: "Kalyani Government Engineering College",
+        where: "Bachelors of Technology (ECE)",
+        date: "2019-23",
     },
     {
-        jobtitle: "Designer of week",
-        where: "Jamalya",
-        date: "2019",
+        jobtitle: "Abhinav Bharati High School",
+        where: "Higher Secondary Level",
+        date: "2017-19",
     },
     {
-        jobtitle: "Designer of week",
-        where: "ALquds",
-        date: "2019",
+        jobtitle: "Hartley's Higher Secondary School",
+        where: "Secondary Level",
+        date: "2006-17",
     },
 ];
 
@@ -41,34 +41,45 @@ const skills = [{
         value: 90,
     },
     {
-        name: "Djano",
-        value: 85,
+        name: "React",
+        value: 90,
     },
     {
         name: "Javascript",
-        value: 80,
+        value: 85,
     },
     {
-        name: "React",
-        value: 60,
+        name: "Next.JS",
+        value: 90,
     },
     {
-        name: "Jquery",
+        name: "Java",
+        value: 85,
+    },
+    {
+        name: "Spring Boot",
+        value: 90,
+    },
+    {
+        name: "Flask",
         value: 85,
     },
 ];
 
 const services = [{
         title: "UI & UX Design",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+        techstack: "Figma, Adobe Photoshop, Adobe Premier Pro CC",
+        description: "",
     },
     {
-        title: "Mobile Apps",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+        title: "Full Stack Development",
+        techstack: "Flask, Spring Boot, Next.JS, Angular, React, Streamlit",
+        description: "",
     },
     {
-        title: "Wordpress Design",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+        title: "Machine Learning and AI",
+        techstack: "TensorFlow, Matplotlib, OpenCV, Google Collab",
+        description: "",
     },
 ];
 
@@ -136,21 +147,19 @@ const dataportfolio = [{
 ];
 
 const contactConfig = {
-    YOUR_EMAIL: "name@domain.com",
-    YOUR_FONE: "(555)123-4567",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula eu nunc et sollicitudin. Cras pulvinar, nisi at imperdiet pharetra. ",
-    // creat an emailjs.com account 
-    // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-    YOUR_SERVICE_ID: "service_id",
-    YOUR_TEMPLATE_ID: "template_id",
-    YOUR_USER_ID: "user_id",
+    YOUR_EMAIL: "archisman112358@gmail.com",
+    YOUR_FONE: "(+91)62903-12831",
+    description: "Ask me about any problems related to my skillset. May not be able to solve; but hey, we surely can come up with something together",
+    YOUR_SERVICE_ID: "service_portfolio",
+    YOUR_TEMPLATE_ID: "template_portfolio",
+    YOUR_PUBLIC_KEY: "6p2du-8YVCEI8vuH1",
 };
 
 const socialprofils = {
-    github: "https://github.com",
-    facebook: "https://facebook.com",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
+    github: "https://github.com/nightKnight112",
+    facebook: "https://www.facebook.com/archisman.das.165/",
+    linkedin: "https://www.linkedin.com/in/das-archisman-10027001/",
+    twitter: "#",
 };
 export {
     meta,

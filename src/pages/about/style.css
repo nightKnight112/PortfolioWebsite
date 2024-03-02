@@ -61,7 +61,7 @@
     font-size: 45px;
 }
 
-.service__title {
+.service__title_main {
     padding: 8px 0;
     border-bottom: solid 2px var(--secondary-color);
 }

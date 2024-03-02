@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import * as emailjs from "emailjs-com";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
@@ -7,6 +7,9 @@ import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig } from "../../content_option";
 
 export const ContactUs = () => {
+  const from_name = useRef();
+  const user_name = useRef();
+  const message = useRef();
   const [formData, setFormdata] = useState({
     email: "",
     name: "",
@@ -16,6 +19,7 @@ export const ContactUs = () => {
     alertmessage: "",
     variant: "",
   });
+  useEffect(() => emailjs.init(`${contactConfig.YOUR_PUBLIC_KEY}`), [])
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,27 +36,21 @@ export const ContactUs = () => {
       .send(
         contactConfig.YOUR_SERVICE_ID,
         contactConfig.YOUR_TEMPLATE_ID,
-        templateParams,
-        contactConfig.YOUR_USER_ID
+        {
+          user_name: user_name.current.value,
+          from_name: from_name.current.value,
+          message: message.current.value
+        }
       )
       .then(
         (result) => {
           console.log(result.text);
           setFormdata({
             loading: false,
-            alertmessage: "SUCCESS! ,Thankyou for your messege",
+            alertmessage: "Thank You for your message, will get back to you at the earliest",
             variant: "success",
             show: true,
           });
-        },
-        (error) => {
-          console.log(error.text);
-          setFormdata({
-            alertmessage: `Faild to send!,${error.text}`,
-            variant: "danger",
-            show: true,
-          });
-          document.getElementsByClassName("co_alert")[0].scrollIntoView();
         }
       );
   };
@@ -124,6 +122,7 @@ export const ContactUs = () => {
                     type="text"
                     required
                     onChange={handleChange}
+                    ref={user_name}
                   />
                 </Col>
                 <Col lg="6" className="form-group">
@@ -136,6 +135,7 @@ export const ContactUs = () => {
                     value={formData.email || ""}
                     required
                     onChange={handleChange}
+                    ref={from_name}
                   />
                 </Col>
               </Row>
@@ -148,6 +148,7 @@ export const ContactUs = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
+                ref={message}
               ></textarea>
               <br />
               <Row>

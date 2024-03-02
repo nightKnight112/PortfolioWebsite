@@ -37,7 +37,7 @@ export const About = () => {
         </Row>
         <Row className=" sec_sp">
           <Col lg="5">
-            <h3 className="color_sec py-4">Work Timline</h3>
+            <h3 className="color_sec py-4">Education</h3>
           </Col>
           <Col lg="7">
             <table className="table caption-top">
@@ -57,7 +57,7 @@ export const About = () => {
         </Row>
         <Row className="sec_sp">
           <Col lg="5">
-            <h3 className="color_sec py-4">Skills</h3>
+            <h3 className="color_sec py-4">Technologies Known</h3>
           </Col>
           <Col lg="7">
             {skills.map((data, i) => {
@@ -81,13 +81,16 @@ export const About = () => {
         </Row>
         <Row className="sec_sp">
           <Col lang="5">
-            <h3 className="color_sec py-4">services</h3>
+            <h3 className="color_sec py-4">Things I Work On</h3>
           </Col>
           <Col lg="7">
             {services.map((data, i) => {
               return (
                 <div className="service_ py-4" key={i}>
-                  <h5 className="service__title">{data.title}</h5>
+                  <div className="service__title_main">
+                    <h5 className="service__title">{data.title}</h5>
+                    <p style={{fontSize: 'small'}}>{data.techstack}</p>
+                  </div>
                   <p className="service_desc">{data.description}</p>
                 </div>
               );

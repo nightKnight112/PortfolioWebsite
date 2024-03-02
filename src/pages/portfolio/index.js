@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { dataportfolio, meta } from "../../content_option";
+import Skeleton from '@mui/material/Skeleton';
+import Stack from '@mui/material/Stack';
 
 export const Portfolio = () => {
+  const [underdev , setUnderDev] = useState(true);
   return (
     <HelmetProvider>
       <Container className="About-header">
@@ -15,11 +18,29 @@ export const Portfolio = () => {
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
           <Col lg="8">
-            <h1 className="display-4 mb-4"> Portfolio </h1>{" "}
+            <h1 className="display-4 mb-4"> Projects and Showcases </h1>{" "}
             <hr className="t_border my-4 ml-0 text-left" />
           </Col>
         </Row>
-        <div className="mb-5 po_items_ho">
+        {
+          underdev ? <>
+            <div>
+                <Skeleton
+                  variant="rectangular"
+                  height={200} // Adjust height as needed
+                  animation="wave" // Add animation effect
+                  style={{ marginBottom: 10 , width: '100%'}} // Add any custom styles
+                >
+                </Skeleton>
+                <Skeleton
+                  variant="rectangular"
+                  height={200} // Adjust height as needed
+                  animation="wave" // Add animation effect
+                  style={{ marginBottom: 10 , width: '100%'}} // Add any custom styles
+                >
+                </Skeleton>
+            </div>
+          </> : <div className="mb-5 po_items_ho">
           {dataportfolio.map((data, i) => {
             return (
               <div key={i} className="po_item">
@@ -32,6 +53,7 @@ export const Portfolio = () => {
             );
           })}
         </div>
+        }
       </Container>
     </HelmetProvider>
   );
